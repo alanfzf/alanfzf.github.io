@@ -2,26 +2,27 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 export default function Home() {
+
+  const username = "alanfzf"
+
   return (
     <div className='h-screen dark:bg-neutral-800 dark:text-white'>
       <Head>
-        <title>@alanfvn ~ urls</title>
+        <title>@{username} ~ urls</title>
       </Head>
       <div className='grid place-items-center h-4/5'>
 
         <div className='flex flex-col items-center'>
           {/* image */}
           <Image
-            src="https://github.com/alanfvn.png"
+            src={`https://github.com/${username}.png`}
             alt="profile"
             width={200}
             height={200}
             className='rounded-md'
           />
           <div className='mt-3 mb-10'>
-            <h1 className="text-3xl font-bold text-center">
-              @alanfvn
-            </h1>
+            <h1 className="text-3xl font-bold text-center">@{username}</h1>
             <p className='italic'>
               These are my socials check them out!
             </p>
@@ -29,7 +30,7 @@ export default function Home() {
 
           <div className="flex space-x-4">
             {/* twitter */}
-            <a href="https://twitter.com/alanfvn" target='_blank' className='hover:scale-110 transition duration-300'>
+            <a href={`https://twitter.com/${username}`} target='_blank' className='hover:scale-110 transition duration-300'>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-10 w-10"
@@ -40,7 +41,7 @@ export default function Home() {
               </svg>
             </a>
             {/* github */}
-            <a href="https://github.com/alanfvn" target='_blank' className='hover:scale-110 transition duration-300'>
+            <a href={`https://github.com/${username}`} target='_blank' className='hover:scale-110 transition duration-300'>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-10 w-10"
@@ -51,7 +52,7 @@ export default function Home() {
               </svg>
             </a>
             {/* youtube urls */}
-            <a href="https://www.youtube.com/@alanfvn" target='_blank' className='hover:scale-110 transition duration-300'>
+            <a href={`https://www.youtube.com/@${username}`} target='_blank' className='hover:scale-110 transition duration-300'>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-10 w-10"
